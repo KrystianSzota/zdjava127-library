@@ -10,24 +10,26 @@ public class Book {
     @Column
     private int id;
 
-    @Column(name = "Book_title")
+    @Column(name = "book_title")
     private String title;
 
-    @Column(name = "Isbn_number")
-    private BigDecimal isbn;
+    @Column(name = "isbn_number")
+    private String isbn;
 
-    @Column(name = "Publisher")
+    @Column(name = "publisher")
     private String publisher;
 
-    @Column(name = "Author")
-    private String autor;
+    @Column(name = "author")
+    private String author;
 
-    public Book(int id, String title, BigDecimal isbn, String publisher, String autor) {
-        this.id = id;
+    public Book() {
+    }
+
+    public Book(String title, String isbn, String publisher, String author) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
-        this.autor = autor;
+        this.author = author;
     }
 
     public int getId() {
@@ -46,11 +48,11 @@ public class Book {
         this.title = title;
     }
 
-    public BigDecimal getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(BigDecimal isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -62,12 +64,12 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
 
