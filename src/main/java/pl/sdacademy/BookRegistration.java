@@ -43,8 +43,7 @@ public class BookRegistration {
         this.registrationNumber = registrationNumber;
     }
 
-    public BookRegistration(int bookRecordId, int bookId, String registrationNumber) {
-        this.bookRecordId = bookRecordId;
+    public BookRegistration(int bookId, String registrationNumber) {
         this.bookId = bookId;
         this.registrationNumber = registrationNumber;
     }
