@@ -2,9 +2,12 @@ package pl.sdacademy;
 import javax.persistence.*;
 import java.sql.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Book {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -21,6 +24,25 @@ public class Book {
 
     @Column(name = "author")
     private String author;
+
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    List<BookRegistration> bookRegistrationList;
+
+    public List<BookRegistration> getBookRegistrationList() {
+        return bookRegistrationList;
+    }
+
+    public void setBookRegistrationList(List<BookRegistration> bookRegistrationList) {
+        this.bookRegistrationList = bookRegistrationList;
+    }
+
+    public void addBookRegistration(BookRegistration bookRegistartion){
+        if (bookRegistrationList == null){
+            bookRegistrationList = new ArrayList<>();
+        }
+        bookRegistrationList.add(bookRegistartion);
+        bookRegistartion.setBook(this);
+    }
 
     public Book() {
     }

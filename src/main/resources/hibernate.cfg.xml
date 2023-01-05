@@ -17,23 +17,9 @@
         <property name="show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">validate</property>
 
-<!--        <mapping class="org.example.Employee"/>-->
-<!--        <mapping class="org.example.Phone"/>-->
-<!--        <mapping class="org.example.Project"/>-->
-<!--        <mapping class="org.example.Task"/>-->
-<!--        <mapping class="org.example.HibernateUtil"/>-->
-
-<!--        <mapping class="org.example.hibernate.entity.Main"/>-->
-<!--        <mapping class="org.example.hibernate.entity.Phone127"/>-->
-<!--        <mapping class="org.example.hibernate.entity.PhoneBrand"/>-->
-<!--        <mapping class="org.example.hibernate.entity.Task127"/>-->
-<!--        <mapping class="org.example.hibernate.entity.TaskType"/>-->
-<!--        <mapping class="org.example.hibernate.entity.HibernateUtil"/>-->
-<!--        <mapping class="org.example.hibernate.entity.Employee127"/>-->
-<!--        <mapping class="org.example.hibernate.entity.Project127"/>-->
-
         <mapping class="pl.sdacademy.BookRegistration"/>
         <mapping class="pl.sdacademy.HibernateUtil"/>
+        <mapping class="pl.sdacademy.Book"/>
 
     </session-factory>
 </hibernate-configuration>

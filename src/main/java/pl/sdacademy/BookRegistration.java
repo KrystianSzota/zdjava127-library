@@ -10,8 +10,9 @@ public class BookRegistration {
     @Column(name = "book_record_id")
     private int bookRecordId;
 
-    @Column(name = "book_id")
-    private int bookId;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 
     @Column(name = "registration_number")
     private String registrationNumber;
@@ -27,12 +28,12 @@ public class BookRegistration {
         this.bookRecordId = bookRecordId;
     }
 
-    public int getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public String getRegistrationNumber() {
@@ -43,8 +44,7 @@ public class BookRegistration {
         this.registrationNumber = registrationNumber;
     }
 
-    public BookRegistration(int bookId, String registrationNumber) {
-        this.bookId = bookId;
+    public BookRegistration(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
 }
